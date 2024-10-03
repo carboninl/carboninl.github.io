@@ -25,6 +25,8 @@ body {
 .navbar {
   position: sticky;
   top: 0;
+  /*always be at the top*/
+  z-index: 100;
 }
 
 .nav-list {
@@ -89,7 +91,11 @@ main {
   display: flex;
   flex-direction: row;
   max-width: 100%;
-  margin: 1em 0 2em 0;
+  margin: 1em 12em 2em 12em;
+  transition: .25s ease-in;
+  padding: 50px;
+  border: 5px solid var(--dark-red);
+  border-radius: 15px;
 
   /* Debug border */
   /* border: 2px solid blue; */
@@ -110,6 +116,10 @@ main {
 
   /* Debug border */
   /* border: 2px solid black; */
+}
+
+.project:hover{
+  transform: scale(1.05);
 }
 
 .project-details {
@@ -159,6 +169,7 @@ main {
   border-radius: 50%;
   border: 5px solid var(--white);
   margin: 5px;
+  transition: .2s ease-in;
 }
 
 .about{
@@ -218,7 +229,7 @@ main {
 /* CSS for resume */
 .resume{
   border: 5px,solid, var(--dark-red);
-  border-radius: 5px;
+  border-radius: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 20px;
